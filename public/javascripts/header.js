@@ -11,3 +11,9 @@ else{
     $('#username').text("UserName:" + $.cookie('userName'));
     $('#logout').show();
 }
+
+function logout(){
+    $.removeCookie("userID");
+    $.removeCookie("userName");
+    history.go(0);  //刷新當前頁面
+}
